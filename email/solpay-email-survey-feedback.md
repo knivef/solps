@@ -11,9 +11,8 @@ description: >
 
 # SolPay Server — Survey and Feedback Emails
 
-Survey emails fail when they feel like work. They succeed when they feel like a
-straightforward ask from someone who genuinely wants the answer. SolPay survey emails
-are short, specific, and honest about why the feedback is being requested.
+Survey emails succeed when they feel like a direct ask from someone who genuinely wants
+the answer. They fail when they feel like corporate admin.
 
 **Before writing:** Load:
 - `product-marketing/SKILL.md` — voice, banned phrases
@@ -21,94 +20,80 @@ are short, specific, and honest about why the feedback is being requested.
 
 ---
 
-## Survey Email Types
+## Step 1: Research What to Ask
 
-| Type | When | Goal | Format |
-|---|---|---|---|
-| **Post-install check-in** | 7-14 days after install | Identify setup friction and common blockers | 1 open question via reply |
-| **Feature feedback** | After releasing a new feature | Understand adoption and pain points | 2-3 specific questions, link to form |
-| **NPS / satisfaction** | Every 3-6 months | Gauge overall satisfaction, get promoter quotes | 1 rating question, 1 open question |
-| **User research** | Before building something new | Understand the problem space | 3-5 targeted questions, link to Typeform/Tally |
-| **Exit / churn** | When a user stops engaging or uninstalls | Understand why, recover where possible | 1 direct question via reply |
+Before writing the email or the survey questions, understand what decisions the
+survey is meant to inform.
 
----
+- If the goal is to improve the setup experience: fetch SolPay's GitHub issues and
+  discussions to identify what problems already come up repeatedly — these become
+  the specific questions, not vague "how was your experience?" prompts
+- If the goal is to understand merchant objections: web search for "why merchants
+  don't accept crypto payments" and similar queries — understand what objections
+  already exist in the broader market before asking your own users
+- If the goal is NPS or satisfaction: identify the 1-2 most important product moments
+  to ask about — not generic satisfaction, but specific to what matters for SolPay
+  (e.g., time from install to first live payment)
 
-## Step 1: Confirm Scope
-
-Before drafting, confirm:
-- What decision or problem is this survey serving?
-- Who is receiving it (segment)?
-- How long should it take? (Under 2 minutes is the threshold for high completion.)
-- Where do responses go (reply to email / Typeform / Tally / Google Form)?
-- What will be done with the responses (this goes in the email — transparency increases completion)?
+**State before drafting:**
+- The decision this survey informs: [specific product or content decision]
+- The 2-3 highest-value questions based on the research above
+- What will be done with the responses (this goes in the email)
 
 ---
 
 ## Step 2: Draft the Survey Email
 
-### Subject line for survey emails
-Be honest about what this is. "Quick question" outperforms "Important survey — take 5 minutes."
+### Subject line
+Be honest about what this is.
 
-Patterns that work:
+Works:
 - "One question about your SolPay setup"
 - "2 minutes: what's working and what isn't with SolPay?"
 - "Quick question about [specific feature]"
 - "Did you get stuck anywhere?" (post-install)
 
-Patterns that do not work:
-- "We'd love your feedback!" (vague, low urgency)
-- "Customer Satisfaction Survey — Q2 2025" (sounds like corporate admin)
-- "Your opinion matters to us" (used so often it has no meaning)
+Does not work:
+- "We'd love your feedback!"
+- "Customer Satisfaction Survey — Q2 2025"
+- "Your opinion matters to us"
 
 ### Body structure
 
 **Line 1:** What you're asking and why. One sentence. Be honest.
-"We're deciding whether to build a native Shopify integration, and we want to hear
-from merchants who've tried the current workaround."
+"We're deciding whether to build a native Shopify integration and want to hear from
+merchants who've tried the current workaround."
 
-**Lines 2-3:** The actual question(s). Direct. Specific.
-"Two questions:
-1. Are you currently using SolPay with Shopify? If yes, how did you set it up?
-2. What is the most annoying part of that setup right now?"
+**Lines 2-3:** The actual questions. Direct and specific. Based on the research in Step 1.
 
 **Line 4:** How long it takes and what you'll do with the answers.
-"Takes 2 minutes. Responses will directly influence what we build next."
+"Takes 2 minutes. Responses go directly into our Q3 roadmap."
 
-**CTA:** Reply directly (for one-question emails) or link to form (for multi-question).
+**CTA:** Reply directly (for single-question emails) or link to form.
 
 **Sign-off:** From a real person. Offer to reply.
 
 ### For longer surveys (form link)
-
 Do not put all the questions in the email. The email's job is to get them to the form.
-Mention the number of questions and the estimated time. That is all.
-
-"We have 5 questions about how you're using SolPay for high-volume invoicing. Takes
-about 3 minutes. Your answers will shape what we prioritize in Q3."
-
-[Take the survey]
+Mention the number of questions and estimated time only.
 
 ---
 
-## Step 3: The Actual Survey Questions
+## Step 3: Survey Questions (If Requested)
 
-If asked to draft the survey questions themselves (for use in a form), follow these rules:
+Rules for the actual form questions:
+- Maximum 7 questions
+- Mix: 1-2 rating/scale, 2-4 open text, 1 multiple choice at most
+- Each question asks one thing only
+- Open questions are more useful than multiple choice for product decisions
+- Always end with "Is there anything else you want us to know?"
+- No leading questions
 
-- **Maximum 7 questions** for any survey. If you need more, run two separate surveys.
-- Mix of question types: 1-2 rating or scale questions, 2-4 open text questions, 1
-  multiple choice at most
-- Each question asks one thing only. "How easy was the setup and how would you rate
-  the documentation?" is two questions.
-- Open questions are more useful than multiple choice for product decisions. Use them.
-- Always include one "Is there anything else you want us to know?" at the end.
-- Never include leading questions: "How much do you love the new dashboard?" is not neutral.
-
-### NPS format (if requested)
-
+### NPS format
 Question 1: "On a scale of 0-10, how likely are you to recommend SolPay Server to
 another developer or merchant?"
 
-Question 2 (conditional on score):
+Question 2 (conditional):
 - Score 9-10: "What's the main reason you'd recommend SolPay?"
 - Score 7-8: "What would make SolPay more valuable for you?"
 - Score 0-6: "What's the biggest thing holding you back from recommending SolPay?"
@@ -117,20 +102,21 @@ Question 2 (conditional on score):
 
 ## Checklist
 
-- [ ] Subject line specific and honest about what's being asked
-- [ ] Opens with why the feedback is being requested
+- [ ] Research done — questions are grounded in real friction or known decisions
+- [ ] Subject line specific and honest
+- [ ] Email states why the feedback is being requested
 - [ ] Questions are specific and answerable
-- [ ] Time estimate is accurate (and short)
-- [ ] What will be done with responses is mentioned
-- [ ] CTA is clear: reply or link to form
+- [ ] Time estimate accurate and short
+- [ ] What will be done with responses is stated
+- [ ] CTA is clear: reply or form link
 - [ ] No em dashes or double hyphens
-- [ ] No banned phrases or corporate survey language
-- [ ] Sent from a real person who can receive replies
+- [ ] No corporate survey language
+- [ ] Sent from a real person
 
 ---
 
 ## Accumulated Lessons
 
-*Append completion rate data, response quality notes, and question format improvements here.*
+*Completion rate data, response quality notes, and question format improvements.*
 
 <!-- Lessons will be appended here. None yet. -->

@@ -8,8 +8,7 @@ description: >
   the keyword cluster for [topic]," "create the definitive guide to [topic]," "beat the
   top-ranking post on [keyword]," "write a comprehensive guide to Solana payments."
   This skill is for 2,500-4,500 word posts only. For shorter SEO posts, use blog-seo.
-  Do not skip any approval gates — skyscrapers take research investment and a bad outline
-  wastes hours.
+  Do not skip any approval gates.
 ---
 
 # SolPay Server — Skyscraper Blog
@@ -25,165 +24,196 @@ ranking in positions 1-5.
 
 ---
 
-## What Makes a Skyscraper Earn Its Position
+## Step 1: Keyword Research and Cluster Mapping
 
-A skyscraper wins by doing at least three of the following that the top-ranking posts do not:
+1. Web search the topic. Identify the full keyword cluster — not just the primary keyword
+   but all related terms a comprehensive post on this topic should rank for.
 
-1. Covering the topic from more angles (more use cases, more audience types)
-2. Including verifiable data that other posts skip or approximate
-3. Going deeper on the technical layer (actual commands, architecture details)
-4. Acknowledging trade-offs honestly (the top-ranking posts often oversell their topic)
-5. Organizing the information better (table of contents, clear H2/H3 hierarchy, scannable)
-6. Answering the "People also ask" questions that competitors leave unanswered
-7. Being more current (updated data, recent Solana developments)
+2. Present the cluster:
 
-Identify the gaps in Step 1 and make sure the outline closes every one of them.
-
----
-
-## Step 1: Competitive Research and Gap Analysis
-
-1. Search for the primary keyword. Pull the top 5 ranking results.
-
-2. For each, analyze:
-   - Approximate word count and depth
-   - H2 structure (what topics do they cover?)
-   - What claims do they make? Are they sourced?
-   - What do they NOT cover that a searcher with this query would want?
-   - What is outdated?
-
-3. Search for "People also ask" questions related to the primary keyword.
-   These are explicit content gaps — questions that need to be answered in the post.
-
-4. Identify keyword cluster:
-   - Primary keyword (the anchor the post is optimized for)
-   - 4-8 secondary keywords within the same cluster
-   - 6-10 LSI and semantic terms to weave throughout
-
-5. Present the gap analysis and keyword cluster:
-
-**Keyword cluster:**
-| Keyword | Volume | Intent | Competition | Role |
+| Keyword | Est. Volume | Intent | Competition | Role |
 |---|---|---|---|---|
 | [primary] | | | | Primary |
 | [secondary x] | | | | Secondary |
 
-**Content gaps in top 5 results:**
-- Gap 1: [what they miss]
-- Gap 2: [what they miss]
-- (etc.)
+3. Check for cannibalization against existing SolPay posts.
 
-**"People also ask" questions to answer:**
-- Question 1
-- Question 2
-- (etc.)
-
-**Wait for gap analysis approval before outlining.**
+4. **Wait for keyword cluster approval before proceeding.**
 
 ---
 
-## Step 2: Outline
+## Step 2: Deep Competitor Research and Gap Analysis
+
+This is the most important step in the skyscraper workflow. The entire post strategy
+depends on understanding what already exists and where it falls short.
+
+### 2a: Fetch the top 5-7 ranking pages
+
+Search for the primary keyword. For each of the top 5-7 results, use `web_fetch` to
+retrieve the full page content. Do not skim — read the full content of each page.
+
+For each competitor post, extract:
+
+- **Title and H1**
+- **Word count** (approximate)
+- **Full H2 and H3 structure** — copy out every heading
+- **Lead angle and hook** — what problem or claim opens the post
+- **Every data point and statistic used** — note whether each is sourced or unsourced
+- **What they cover well** — sections with real depth
+- **What they cover poorly** — thin sections, vague claims, missing examples
+- **What they miss entirely** — topics, audiences, questions, use cases not covered
+- **How current the content is** — outdated stats, deprecated tools, old product info
+
+### 2b: "People also ask" and SERP features
+
+Search the primary keyword and every major secondary keyword in the cluster. Record:
+- All "People also ask" questions
+- Related searches
+- Any featured snippets and what format they use (paragraph, list, table)
+- Any knowledge panel content
+
+### 2c: Source research
+
+For every major claim in the competitor posts, find the original source. If the source
+is better than what the competitors link to, use it. If it is outdated, find the current
+version. If it does not exist (unsourced claim), note it — either find a real source or
+do not make the claim.
+
+Also proactively search for data and research that competitors have missed entirely:
+- Solana Foundation reports and network data
+- Stablecoin payment volume data
+- Crypto merchant adoption studies
+- Self-hosting and open-source payment tooling coverage
+
+### 2d: Compile the full research brief
+
+Present before outlining:
+
+**Competitor analysis:**
+
+| # | URL | Words | H2 Structure Summary | Strongest Section | Key Gaps |
+|---|---|---|---|---|---|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 | | | | | |
+| 5 | | | | | |
+
+**All content gaps (topics missing across all top results):**
+- Gap 1
+- Gap 2
+- (list every gap found)
+
+**All "People also ask" questions not fully answered:**
+- Question 1
+- Question 2
+
+**Data and sources available that competitors missed:**
+- Source 1: [what data it provides]
+- Source 2: [what data it provides]
+
+**Target word count:** Average of top 5 plus 25-30%. State the number.
+
+**SolPay's differentiation angle:** The specific thesis this post owns. Must come from
+the gap analysis. Must be something none of the top 5 posts say clearly.
+
+**Wait for full research brief approval before outlining.**
+
+---
+
+## Step 3: Outline
 
 A skyscraper outline is detailed because skyscrapers fail in the outline, not the draft.
+Every H2 must map to a gap, a PAA question, or a keyword in the cluster. Flag which one.
 
-Present:
-
-- **2-3 title options** — comprehensive framing, primary keyword near front, under 70
-  characters
-  Examples: "The Complete Guide to Self-Hosted Solana Payments (2025)" or
-  "Solana Payment Gateway: How to Accept SOL and SPL Tokens Without a Middleman"
-
-- **Meta description** — 140-160 chars, primary keyword, signals comprehensiveness
-
+Include:
+- **2-3 title options** — comprehensive framing, primary keyword near front, under 70 chars
+- **Meta description** — 140-160 chars, keyword, signals comprehensiveness
 - **URL slug** — short, keyword-first
-
-- **Narrative pillar** — which SolPay pillar anchors this post
-
-- **Primary audience** — who is this post most for
-
+- **Narrative pillar** — which SolPay pillar anchors this
+- **Primary audience**
 - **Full Table of Contents** — every H2 and H3, annotated with:
-  - Which content gap it closes
-  - Which keyword or question it targets
+  - Which gap or PAA question it closes
+  - Which keyword it targets
   - Estimated word count for that section
-
-- **Data and sources plan** — which claims need sourcing, where those sources come from
-
+- **Data and sources plan** — which claims need sourcing, which sources to use
 - **Internal link plan** — 5-8 internal links with anchor text
-
-- **CTA plan** — soft CTA mid-post, direct CTA at close, and what each CTA leads to
+- **CTA plan** — soft mid-post, direct at close
 
 **Do not begin the draft without outline approval.**
 
 ---
 
-## Step 3: Draft
+## Step 4: Draft
 
 ### Architecture
-Skyscrapers satisfy three types of searcher in one post:
-- The reader who wants to understand the topic (informational — serve them at the top)
-- The reader comparing options (commercial — serve them in the middle)
-- The reader ready to act (transactional — serve them at the close)
 
-Structure the post accordingly:
-1. **Open** with the problem or context (informational, sets the stage)
-2. **Explain the landscape** (what options exist, why self-hosted matters)
-3. **Go deep on SolPay** (the product sections — features, setup, use cases)
-4. **Address objections and trade-offs** (builds credibility, reduces bounce)
-5. **Close with action** (transactional CTA, clear next step)
+Skyscrapers serve three searcher types in one post:
+1. Reader who wants to understand (informational — top of post)
+2. Reader comparing options (commercial — middle)
+3. Reader ready to act (transactional — close)
+
+Structure accordingly. Do not put the CTA at the top.
 
 ### Table of contents
-Include a linked table of contents at the top. It improves UX and signals to Google
-that the post is comprehensive.
+Include a linked TOC at the top. Improves UX and signals comprehensiveness to Google.
 
-### Writing rules for long-form
-- Vary paragraph length. Two short paragraphs then one medium one, not endless identical blocks.
-- Each H2 section should be independently useful — a reader jumping to a section mid-post
-  should get value without reading what came before.
-- Use tables for comparisons, numbered lists for steps, bullets for feature lists.
-  Do not use bullets for prose.
-- Every data point needs a source in the text. Do not make unsourced claims in a post
-  that's supposed to be the definitive resource.
-- Include at least one code block or technical example if the topic is developer-facing.
+### Using the research
+- Where competitors use a statistic, use a better, more recent, or more specific one
+- Where competitors make unsourced claims, source yours with a link to the primary source
+- Where competitor structure is logical, reorganize it so the architecture is meaningfully
+  different — same topics, different order and depth
+- Where competitor content is outdated, flag the current state explicitly:
+  "As of [year], Solana's average transaction fee is $0.00025, down from..."
+- Answer every PAA question identified in Step 2 — either as a dedicated H2/H3 or woven
+  into a directly relevant section
+- Use tables for comparisons, numbered lists for steps, bullets for feature lists
 
-### Voice
-- No em dashes or double hyphens
+### Writing rules
+- One idea per paragraph, 2-3 sentences
+- Vary paragraph and sentence length deliberately
+- Each H2 section independently useful — a reader jumping in mid-post gets value
+- Specific numbers throughout — "65,000 TPS theoretical capacity" not "very high throughput"
+- No em dashes, no double hyphens
 - No banned phrases
-- Honest about trade-offs: "self-hosting means you're responsible for uptime and security —
-  that's a real operational cost, and it's worth knowing before you start"
-  (note: rewrite that without the em dash — use a period or restructure)
-- Specific and verifiable: "$0.00025 per transaction" beats "very low fees"
+- Honest about trade-offs — self-hosting has real operational overhead, say it
+
+### Links
+- 5-8 internal links with descriptive anchor text
+- 4-6 external links to primary authoritative sources
 
 ---
 
-## Step 4: Pre-Publish Checklist
+## Step 5: Pre-Publish Checklist
 
-**Content:**
-- [ ] Covers all identified content gaps from Step 1
-- [ ] Answers all "People also ask" questions
-- [ ] Every data claim is sourced
-- [ ] Trade-offs covered honestly at least once
-- [ ] Table of contents present and linked
-- [ ] Each H2 section provides standalone value
+**Research layer:**
+- [ ] Top 5-7 pages fully fetched and analyzed via web_fetch
+- [ ] Every identified gap addressed in the draft
+- [ ] Every PAA question answered somewhere in the post
+- [ ] Every data claim sourced to a primary source
+- [ ] Word count meets or exceeds target from Step 2
+- [ ] SolPay's differentiation angle clear and distinct
 
-**SEO:**
+**SEO layer:**
 - [ ] Primary keyword in title, H1, URL slug
-- [ ] Meta description 140-160 chars
 - [ ] Full H2/H3 structure covers keyword cluster naturally
+- [ ] Meta description 140-160 chars
 - [ ] 5-8 internal links with descriptive anchor text
-- [ ] 3-6 external links to authoritative sources
-- [ ] Word count 2,500-4,500 (check against the gap analysis — beat the average of top 5)
-- [ ] Images have alt text with keywords where natural
+- [ ] 4-6 external links to authoritative sources
+- [ ] Table of contents present and linked
+- [ ] Images have alt text
 
 **Voice:**
 - [ ] No em dashes or double hyphens
 - [ ] No banned phrases
 - [ ] Paragraph lengths varied
-- [ ] Opener addresses the reader before mentioning SolPay
+- [ ] Opener addresses reader before mentioning SolPay
+- [ ] Trade-offs covered honestly
 
 ---
 
 ## Accumulated Lessons
 
-*Add post-publish ranking data, link acquisition results, and structural improvements here.*
+*Post-publish ranking data, link acquisition results, and structural improvements.*
 
 <!-- Lessons will be appended here. None yet. -->

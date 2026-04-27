@@ -24,56 +24,89 @@ real and wants to talk about it honestly. Not a brand account. Not a hype accoun
 ## Quick Mode vs Full Workflow
 
 **Quick mode** — specific tweet or thread requested:
-Skip to [Step 3: Copy Writing](#step-3-copy-writing). Apply all writing rules.
+Run Step 1 (topic research) for the specific topic, then skip to Step 4 (Copy Writing).
+Do not skip the research even in quick mode — a tweet based on a misread story or stale
+data is worse than no tweet.
 
 **Full workflow** — weekly planning, content calendar, or "what should we post":
-Follow all five steps in order.
+Follow all steps in order.
 
 ---
 
-## Step 1: Weekly Trend Pulse
+## Step 1: Topic Research
+
+Before writing any copy, research the topic. This applies to both quick mode and full
+workflow.
+
+### For trend or news-based posts
+- Web search the topic or news item
+- Use `web_fetch` to retrieve the full source article or announcement — do not write
+  from a headline or snippet
+- Confirm the facts: what actually happened, what the real numbers are, what the
+  official source says
+- Identify what the mainstream crypto Twitter take already is — then find the angle
+  that adds something different
+
+### For product or feature posts
+- Confirm the current state of the feature from SolPay documentation or GitHub
+- Do not assert capabilities that have not been verified
+
+### For industry commentary posts
+- Search for 2-3 credible sources on the topic
+- Use `web_fetch` on the most relevant one to get the full context
+- Note the specific data point or quote that anchors the take
+
+### Research output (quick, not formal)
+Before writing, state in one sentence:
+- What the source says (the fact)
+- What the SolPay angle is (the take)
+
+Example: "Stripe announced fee increases on international cards averaging 1.5%.
+SolPay angle: self-hosted Solana payments have no platform fee layer."
+
+---
+
+## Step 2: Weekly Trend Pulse (Full Workflow Only)
 
 Search for what is moving this week in:
-- Solana network and ecosystem (upgrades, outages, major launches)
-- Stablecoin news (USDC, USDT, regulatory developments)
-- Crypto payments and merchant adoption
-- Payment processor news (Stripe, PayPal, Coinbase Commerce policy changes)
-- Open-source and self-hosted software movements
-- High-risk merchant deplatforming or financial censorship events
+- Solana network and ecosystem
+- Stablecoin news and regulation
+- Crypto payment and merchant adoption
+- Payment processor policy changes (Stripe, PayPal, Coinbase Commerce)
+- Open-source and self-hosted software
+- High-risk merchant deplatforming events
 
-Present 5-7 trending topics:
+Use `web_fetch` on the most relevant stories — not just headlines. Present 5-7 trending
+topics with enough substance to build real takes:
 
-| Topic | Summary | SolPay Angle | Urgency |
+| Topic | What's Actually Happening | SolPay Angle | Urgency |
 |---|---|---|---|
-| [topic] | 2 sentences | Which narrative pillar, specific tweet concept | Hot / Warm / Evergreen |
+| [topic] | 2-3 sentences of real detail | Specific tweet or thread concept | Hot / Warm / Evergreen |
 
 Ask which trends to engage before planning content.
 
 ---
 
-## Step 2: Content Calendar
+## Step 3: Content Calendar (Full Workflow Only)
 
 Default cadence: 5-7 posts per week.
 
-Apply the content mix from social-media-marketing skill: 35% opinion/narrative, 25%
-product, 25% ecosystem, 15% community.
+Content mix: 35% opinion/narrative, 25% product, 25% ecosystem, 15% community.
 
-For each calendar slot:
-
-| Day | Format | Topic | Narrative Pillar | Trend Hook | Visual Needed | CTA |
+| Day | Format | Topic | Narrative Pillar | Research Source | Visual Needed | CTA |
 |---|---|---|---|---|---|---|
-| | | | | | Yes / No | |
+| | | | | URL or "internal" | Yes / No | |
 
 **Wait for calendar approval before writing copy.**
 
 ---
 
-## Step 3: Copy Writing
+## Step 4: Copy Writing
 
 For each post, deliver:
 1. Ready-to-post copy with character count noted
 2. Thread continuation tweets if applicable (numbered: 1/ 2/ etc.)
-3. Visual direction if the post needs an image or graphic
+3. Visual direction if needed
 4. Hashtags (1-3 max)
 5. Suggested posting time
 
@@ -83,153 +116,116 @@ For each post, deliver:
 
 ### Short Tweet (under 200 characters)
 For: hot takes, quick stats, product one-liners, reaction to news.
-Hits hard and leaves. Every word earns its place.
-
-Example approach:
-> "Stripe just froze another iGaming account. The answer isn't a better Stripe alternative.
-> It's owning your payment stack."
+Every word earns its place. If the source has a specific number, use it.
 
 ### Medium Tweet (200-280 characters)
-For: punchy takes that need a bit more setup, feature hooks, questions to the audience.
-Still fits in one idea — just needs the full space to land.
+For: punchy takes that need more setup, feature hooks, questions to the audience.
 
 ### Thread (4-10 tweets)
 For: explainers, walkthroughs, case studies, narrative arcs.
 
 **Thread rules:**
 - Write the hook tweet last, after the full thread is done
-- Hook tweet must work standalone — if it doesn't earn the click, the thread dies
+- Hook tweet must work standalone
 - Each tweet in the thread: one idea, full stop
 - Final tweet: CTA or callback to the opening
-- Number format: 1/ 2/ 3/ — only the number in the post body, no "Thread:" labels
-- 4 tweets minimum for something worth threading. Under 4, write a medium tweet.
-
-Example hook structures that work:
-- A counterintuitive stat: "Solana processes 2,000 transactions per second. The average
-  Stripe payment takes 2.9 cents plus $0.30. One of these facts is more interesting."
-- A specific scenario: "Imagine your payment gateway cancels your account on a Friday
-  afternoon. Here's what that looks like and what to have ready."
-- A direct question: "Why does it cost $0.00025 to move USDC on Solana and $3.00 to
-  wire money between two banks?"
+- Number format: 1/ 2/ 3/ — only in the post body
+- Base every factual claim in the thread on the source researched in Step 1
 
 ### Twitter Article
-For: long-form thought leadership that belongs on X but exceeds thread format.
-Think 500-1,500 words. Structured like a blog post but published natively on X.
-
-Use for: deep technical explainers, founder perspectives, analytical takes on
-regulation or trends.
+For: long-form thought leadership that exceeds thread format (500-1,500 words).
 
 **Article structure:**
-- Headline: specific and honest, not clickbait
+- Headline: specific and honest
 - Opening: the tension or problem in 1-2 sentences
-- Body: organized with clear subheadings, short paragraphs
-- Closing: a clear position or call to action
-- Share post: the companion short tweet that promotes the article — write this too
+- Body: organized with subheadings, short paragraphs
+- Closing: clear position or call to action
+- Also write the companion short tweet that promotes the article
 
 ### Quote Tweet with Commentary
-For: reacting to ecosystem news, positioning without direct competitor naming.
+For: reacting to ecosystem news, positioning without naming competitors.
 
-**Rule:** Lead with the SolPay angle before quoting. Never just agree. The commentary
-has to add something that the original tweet does not.
-
-Format:
-> [Your take in 1-3 sentences. Makes a point the original doesn't. Then the quote.]
+**Rule:** Lead with the SolPay angle before quoting. Add something the original does not.
+Never just agree.
 
 ### Poll
 For: audience research, debate framing. Max once per week.
-
-**Poll rules:**
-- Options must be genuinely interesting to vote on
-- Do not design a poll where one answer is obviously "correct"
-- Question should touch on a real tension in the payments or crypto space
-- Always have a genuine follow-up planned for the results
+Options must be genuinely interesting — not asymmetric or leading.
 
 ---
 
 ## Writing Rules
 
 ### Voice
-- No em dashes or double hyphens. Rewrite so the sentence doesn't need them.
-- No: "Excited to announce," "Game changer," "Thrilled to share," "Innovative"
-- Take a position. Hedged takes die on Twitter.
+- No em dashes or double hyphens
+- No banned phrases ("excited to announce," "game changer," etc.)
+- Take a position — hedged takes die on Twitter
 - Short sentences. Vary length deliberately.
-- Contractions preferred. "It's" not "it is."
-- First person: "we" for product posts, "I" for founder opinion posts. Pick one per post.
-- Do not start posts with "At SolPay," "As a self-hosted payment gateway," or "We are..."
+- Contractions preferred
+- Do not start posts with "At SolPay," "We are," or "As a self-hosted..."
 
 ### The hook rule
-The hook tweet (or first line of a single tweet) determines whether anyone reads anything.
-It must do one of the following:
-- Surface a counterintuitive fact
-- Name a specific pain that the audience has felt
+The hook determines whether anyone reads anything. Write it last for threads.
+It must do one of:
+- Surface a counterintuitive or specific fact (from the research)
+- Name a pain the audience has actually felt
 - Make a claim that earns a challenge or a click
 - Open a loop the reader wants closed
 
-Write the hook last for threads. After the full thread is written, you know what you are
-actually promising. The hook is the promise.
-
 ### Numbers and specifics
-"$0.00025 per transaction" is better than "very low fees."
-"Under 2 seconds" is better than "fast finality."
-"400ms" is better than "near-instant."
-Use the actual numbers from the product-marketing skill. When in doubt, link to Solana
-Foundation data.
+Always use the actual number from the source. "Stripe raised international card fees
+by 1.5%" is better than "Stripe raised fees." "$0.00025 per transaction" beats "very
+low fees." Specificity signals that the take is researched, not generated.
 
 ### Hashtags
-- 1-3 max. Never more.
-- `#Solana` for technical Solana posts
-- `#crypto` or `#payments` for merchant-facing posts
-- `#selfhosted` for sovereignty angle posts
-- Skip hashtags entirely on threads with good organic reach — they can look spammy
+1-3 max. `#Solana` for technical posts. `#crypto` or `#payments` for merchant posts.
+`#selfhosted` for sovereignty posts. Skip entirely on well-performing thread topics.
 
 ---
 
 ## CTA and UTM
 
-All links use UTM parameters:
+All links:
 `?utm_source=twitter&utm_medium=social&utm_campaign=[slug]&utm_content=[post-slug]`
 
 | Content type | Primary CTA | Secondary |
 |---|---|---|
 | Product feature | "Deploy in 15 minutes" | "Read the docs" |
 | Setup / install | "Get started" | "Star on GitHub" |
-| Industry post | "What's your take?" (replies) | "Read the full breakdown" |
+| Industry post | "What's your take?" | "Read the full breakdown" |
 | Community | "Join the Discord" | "Follow for updates" |
-| Changelog | "See what changed" | "Update your instance" |
 
 ---
 
 ## Visual Direction Format
 
-For posts requiring visuals, include:
+For posts requiring visuals:
 - **Concept:** what the image should show
 - **Format:** static / GIF / screenshot / infographic
-- **Text overlay:** exact copy (minimal — 5-10 words max)
+- **Text overlay:** exact copy (5-10 words max)
 - **Style:** clean technical / data visual / typographic / product UI screenshot
-- **Alt text:** written out, descriptive
+- **Alt text:** written out
 
-SolPay visual tone: clean, technical, no crypto-cliche imagery (no rockets, moons,
-handshakes over blockchains). Think developer tool aesthetic.
+No crypto-cliche visuals (no rockets, moons, handshakes over blockchains).
 
 ---
 
 ## Quality Checklist
 
-Before submitting any batch:
-- [ ] No em dashes or double hyphens in any post
+- [ ] Topic researched via web search and web_fetch before writing
+- [ ] Every factual claim verified against source
+- [ ] No em dashes or double hyphens
 - [ ] No banned phrases or filler openers
-- [ ] Every post has a hook that earns the read
-- [ ] Hook tweets written last (for threads)
+- [ ] Hook earns the read (written last for threads)
 - [ ] Each thread tweet works standalone
 - [ ] Hashtags within limit
 - [ ] UTM on every link
 - [ ] Visual direction provided where needed
-- [ ] Tone matches the narrative pillar for that post
 
 ---
 
 ## Accumulated Lessons
 
-*Append engagement data, format performance, and tone adjustments after each review cycle.*
+*Engagement data, format performance, and tone adjustments after each review cycle.*
 
 <!-- Lessons will be appended here. None yet. -->
